@@ -9,14 +9,6 @@ source /usr/share/yunohost/helpers
 ynh_abort_if_errors
 
 #=================================================
-# RETRIEVE ARGUMENTS
-#=================================================
-
-protocol=$(ynh_app_setting_get --key=protocol)
-username=$(ynh_app_setting_get --key=username)
-userpass=$(ynh_app_setting_get --key=userpass)
-
-#=================================================
 # SPECIFIC SETTERS
 #=================================================
 
