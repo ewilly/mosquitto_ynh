@@ -31,8 +31,8 @@ set__protocol() {
         usermod -a -G ssl-cert $app
 
         # Expose the SSL and websockets ports
-        ynh_exec_warn_less yunohost firewall allow TCP $port_ssl --no-upnp --no-reload
-        ynh_exec_warn_less yunohost firewall allow TCP $port_websockets --no-upnp --no-reload
+        ynh_hide_warnings yunohost firewall allow TCP $port_ssl --no-upnp --no-reload
+        ynh_hide_warnings yunohost firewall allow TCP $port_websockets --no-upnp --no-reload
 
         # save the new setting
         ynh_app_setting_set --key=protocol --value="secure_mqtt"
