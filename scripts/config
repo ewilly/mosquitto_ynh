@@ -36,7 +36,7 @@ set__protocol() {
 
         # save the new setting
         ynh_app_setting_set --key=protocol --value="secure_mqtt"
-    elif
+    else
         # Add corresponding configuration file
         ynh_config_add --template="mosquitto_plain.conf" --destination="/etc/mosquitto/conf.d/default.conf"
 

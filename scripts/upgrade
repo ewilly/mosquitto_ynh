@@ -58,7 +58,7 @@ then
     ynh_exec_warn_less yunohost firewall allow TCP $port_ssl --no-upnp
     ynh_exec_warn_less yunohost firewall allow TCP $port_websockets --no-upnp
 
-elif
+else
     # Add corresponding configuration file
     ynh_config_add --template="mosquitto_plain.conf" --destination="/etc/mosquitto/conf.d/default.conf"
 fi
