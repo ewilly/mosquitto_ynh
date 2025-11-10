@@ -33,6 +33,9 @@ set__protocol() {
         # Expose the SSL and websockets ports
         ynh_exec_warn_less yunohost firewall allow TCP $port_ssl --no-upnp --no-reload
         ynh_exec_warn_less yunohost firewall allow TCP $port_websockets --no-upnp --no-reload
+
+        # save the new setting
+        ynh_app_setting_set --key=protocol --value="secure_mqtt"
     elif
         # Add corresponding configuration file
         ynh_config_add --template="mosquitto_plain.conf" --destination="/etc/mosquitto/conf.d/default.conf"
