@@ -30,7 +30,7 @@ then
     ynh_delete_file_checksum "/etc/mosquitto/passwd"
 fi
 
-if ynh_app_upgrading_from_version_before 2.0.20~ynh3
+if [ -z ${protocol:-} ]
 then
     ynh_app_setting_set --key=protocol --value="secure_mqtt"
 fi
