@@ -23,14 +23,15 @@ choices.secure_mqtt = "Use MQTT over SSL/TLS or MQTT over websockets protocols"
 [main.extra]
 name.en = "Extra tools"
 name.fr = "Outils"
+help.en = "It will reset all your currents moquitto accounts! To add an new account, see Admin doc bellow."
+help.fr = "Cela supprimera le(s) compte(s) actuel(s) ! Pour ajouter un compte, référez-vous au guide d'administration en bas de la page."
 
 [main.extra.userpass]
 ask.en = "Change the password"
 ask.fr = "Changer le mot de passe"
 type = "string"
-help.en = "You can easily change the password of your Mosquitto. Just put the desired password in the text input. It will reset first your currents accounts."
-help.fr = "Vous pouvez facilement changer le mot de passe de votre Mosquitto. Renseignez juste le mot de passe désiré dans le champ de saisie. Cela supprimera le(s) compte(s) actuel(s)."
-
+help.en = "You can easily change the password of your Mosquitto. Just put the desired password in the text input."
+help.fr = "Vous pouvez facilement changer le mot de passe de votre Mosquitto. Renseignez juste le mot de passe désiré dans le champ de saisie."
 [main.extra.username]
 ask.en = "Change the username"
 ask.fr = "Changer le nom d'utilisateur"
