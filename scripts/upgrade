@@ -65,7 +65,7 @@ fi
 
 # Generate passwd file
 touch /etc/mosquitto/passwd
-mosquitto_passwd -b "/etc/mosquitto/passwd" "$username" "$userpass"
+ynh_hide_warnings mosquitto_passwd -b "/etc/mosquitto/passwd" "$username" "$userpass"
 
 # Hard coded username because deb package creates the user
 chown -R "mosquitto" "/etc/mosquitto"
